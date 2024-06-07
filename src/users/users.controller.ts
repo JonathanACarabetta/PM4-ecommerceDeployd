@@ -47,7 +47,7 @@ export class UsersController{
     }
 
     @ApiBearerAuth()
-    @Get(":email")
+    @Get("email/:email")
     @UseGuards(AuthGuard)
     getUserByEmail(@Param("email") email:string){
         const user = this.usersService.getUserByEmail(email);
