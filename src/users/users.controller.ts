@@ -45,4 +45,12 @@ export class UsersController{
         const user = this.usersService.deleteUser(id);
         return user;
     }
+
+    @ApiBearerAuth()
+    @Get(":email")
+    @UseGuards(AuthGuard)
+    getUserByEmail(@Param("email") email:string){
+        const user = this.usersService.getUserByEmail(email);
+        return user;
+    }
 };
