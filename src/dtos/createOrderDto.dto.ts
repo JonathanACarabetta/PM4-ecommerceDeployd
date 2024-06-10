@@ -13,7 +13,7 @@ export class CreateOrderDto{
 
     /**
      * Esta es la propiedad Products, es un arreglo parcial de Product, solo contiene el ID
-     * @example products:[{"id":"uuid1"},{"id":"uuid2"}]
+     * @example [{"id":"uuid1"},{"id":"uuid2"}]
      */
     @IsArray()
     @ArrayMinSize(1)
